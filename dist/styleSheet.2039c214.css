@@ -1,0 +1,91 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    min-width: 25px;
+    background-color: whitesmoke;
+}
+.container input {
+    visibility: hidden;
+}
+.checkmark {
+    position: absolute;
+    content: "✓";
+    color: rgb(200, 200, 200);
+    font-size: 20px;
+}
+.checkmark:after {
+    content: "✓";
+    color: "red";
+    opacity: 0.8;
+}
+.container:hover input ~ .checkmark:after {
+    color: red;
+    opacity: 0.3;
+}
+.container input:checked ~ .checkmark:after {
+    content: "✓";
+    opacity: 1;
+    color: orangered;
+}
+.row {
+    flex: content;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+    display: flex;
+    height: 50px;
+    width: 100%;
+}
+.taskName {
+    flex: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    cursor: default;
+    background-color: whitesmoke;
+    -moz-user-select: none;
+}
+.removeSpace {
+    min-width: 25px;
+    background-color: whitesmoke;
+}
+.removeButton {
+    padding-top: 4px;
+    border: 0px solid black;
+    min-width: 25px;
+    background-color: whitesmoke;
+}
+.grid {
+    display: flex;
+    flex-direction: column-reverse;
+    min-width:150px;
+}
+.entry {
+    display: flex;
+    flex-direction: column-reverse;
+    min-width:150px;
+    width:100%;
+}
+.dataTab {
+    border: 0px solid black;
+    width: 33%;
+    -moz-user-select: none;
+    user-select: none;
+}
+.dataTab:hover {
+    background-color: rgba(25, 25, 25, 0.2)
+}
+.tabRow {
+    flex: content;
+    display: flex;
+    height: 35px;
+    width: 100%;
+    justify-content: space-evenly;
+    box-shadow: 0px 2px rgb(175, 175, 255);
+}
+
+/*# sourceMappingURL=/styleSheet.2039c214.css.map */

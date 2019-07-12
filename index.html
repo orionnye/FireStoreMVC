@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Orion Build</title>
+        <link href="styleSheet.css" rel="stylesheet" />
+        <style>
+            /* test area */
+            .selectBar {
+                background-color: red;
+                display: flex;
+                width: 33%;
+            }
+            .spaceDiv {
+                display: flex;
+                flex-grow: 1;
+                width: 33%;
+                transition: width 0.2s;
+            }
+            .selectionRow {
+                display: flex;
+                flex: auto;
+                height: 2px;
+                width: 100%;
+                justify-content: center;
+                transition: justify-content 2s;
+            }
+        </style>
+    </head>
+    <body>
+        <input id="dataEntry" type="search" class="entry" placeholder="Enter Tasks Here!!!"></input>
+            <div class="tabRow">
+                <button id="Active" class="dataTab">
+                    Active
+                </button>
+                <button id="All" class="dataTab">
+                    All
+                </button>
+                <button id="Complete" class="dataTab">
+                    Complete
+                </button>
+            </div>
+            <div id="selectionRow" class="selectionRow">
+                <div id="left" class="spaceDiv"></div>
+                <div class="selectBar"></div>
+                <div id="right"class="spaceDiv"></div>
+            </div>
+        <div id="grid" class="grid">
+        </div id="grid">
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+        
+        <script src="./app.js"></script>
+    </body>
+</html>
